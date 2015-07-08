@@ -1,0 +1,31 @@
+<:Title>
+  Home
+
+<:Body>
+  <h1>Home</h1>
+
+  <div class="controls">
+    <button e-click="show_new_card_form">New Card</button>
+  </div>
+
+  <div class="card-form">
+    <form e-submit="save_new_card">
+      <input value="{{page._new_card_front}}">
+      <input value="{{page._new_card_back}}">
+      <button>Save Card</button>
+    </form>
+ </div>
+
+ <div class="cards">
+    {{ _cards.each do |card| }}
+      <div class="card">
+        {{ card._front }}
+      </div>
+    {{ end}}
+  </div>
+<!--  -->
+<!--  <:Card> -->
+<!--   <div class="card"> -->
+<!--     {{_front}} -->
+<!--     {{_back}} -->
+<!--   </div> -->
